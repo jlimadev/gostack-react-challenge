@@ -13,11 +13,9 @@ function App() {
   }, []);
 
   async function handleAddRepository() {
-    const date = ` ${Date.now()}`;
-
     const response = await api.post('repositories', {
-      url: `https://github.com/Rocketseat/repository${date}`,
-      title: `New Repository ${date}`,
+      url: `https://github.com/Rocketseat/repository${Date.now()}`,
+      title: `New Repository ${Date.now()}`,
       techs: ['Node', 'Express', 'TypeScript'],
     });
 
